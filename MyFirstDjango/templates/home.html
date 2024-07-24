@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Django Project</title>
+    <h1>Hello {{name}}</h1>
+</head>
+<body>
+    <form action="add" method="post">
+        {% csrf_token %}
+        Enter First Number: <input type = "text" name = "1st Number"><br>
+        Enter Second Number: <input type = "text" name="2nd Number"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
