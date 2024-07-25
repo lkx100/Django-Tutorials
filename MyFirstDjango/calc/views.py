@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 
-def home(req):
+def home(req): 
     return render(request = req, template_name = 'home.html', context = {'name': 'Lucky Kumar'})
 
 def add(req):
@@ -14,4 +14,4 @@ def add(req):
 
 def greet(req):
     name = req.POST['Name']
-    return render(request = req, template_name = "greet.html", context = {"Your Greet Message Here !\n\n": name})
+    return render(request = req, template_name = "greet.html", context = {"User": name})
