@@ -11,3 +11,7 @@ def add(req):
     a = int(req.POST['1st Number'])
     b = int(req.POST['2nd Number'])
     return render(request = req, template_name = 'add.html', context = {'Result': a+b})
+
+def greet(req):
+    name = req.POST['Name']
+    return render(request = req, template_name = "greet.html", context = {"Your Greet Message Here !\n\n": name})
