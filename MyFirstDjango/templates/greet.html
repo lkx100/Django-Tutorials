@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +9,11 @@
     <title>Adding Result</title>
 </head>
 <body>
-    <h1> Hello {{User}} ! </h1> <br>
+    <h1> Hello {{User}} ! </h1>
     <h2> You have sucessfully created your own separate page. </h2>
     <a href="{% url 'home' %}"> <button type="button" class="btn btn-success">Home Window</button> </a>
+
+    {% endblock %}
+
 </body>
 </html>
