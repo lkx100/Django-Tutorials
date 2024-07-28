@@ -1,14 +1,9 @@
-{% load static %}  <!--Before Rendering, Using {% xx %} to load static content-->
+{% extends "layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chai Aur Django</title>
-</head>
-<body>
-    <link rel="stylesheet" href="{% static 'style.css' %}">  <!--Injecting code-->
-    <h1>Chai Aur Django</h1>
-</body>
-</html>
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1> Chai Aur Code | HomePage </h1
+{% endblock %}

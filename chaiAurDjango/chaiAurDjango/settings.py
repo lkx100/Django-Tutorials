@@ -56,7 +56,7 @@ ROOT_URLCONF = 'chaiAurDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates', 'chai/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
