@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -13,3 +14,14 @@ def add(req):
 def greet(req):
     name = req.POST['Name']
     return render(request = req, template_name = "greet.html", context = {"User": name})    # Context --> Passing arguments to html page to render variables
+
+def dashboard(req):
+    return render(req, 'dashboard.html')
+
+def dashboard(request):
+    customers=Customer.objects.all()
+    return render(request,'dashboard.html',{'customers':customers})
+                  
+def products(request):
+    products=Product.objects.all()
+    return render(request,'product.html',{'products':products})
