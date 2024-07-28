@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %} CHAI DETAIL PAGE {% endblock %}
+
+{% block content %}
+
+    <h1> Chai Detail Page </h1>
+    {% if chai.image %}
+        <img src = '{{chai.image.url}}'>
+    {% endif %}
+    <h2> 
+        Chai ID - {{chai.id}} <br>
+        Chai Name - {{chai.name}} <br>
+        Chai Order Date - {{chai.date_added}} <br>
+        Chai Type - {{chai.chaiType}} <br>
+        {% if chai.description != "" %}
+            Chai Description - {{chai.description}}
+        {% else %}
+            Chai Description - Not Available
+        {% endif %}
+    </h2>
+
+{% endblock %} 

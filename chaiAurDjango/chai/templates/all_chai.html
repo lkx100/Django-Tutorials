@@ -3,8 +3,29 @@
 {% block title %} ALL CHAI HOMEPAGE {% endblock %}
 
 {% block content %}
-<h1>
-    Hey Lucky, Contraluations !!
-    You have successfully implemented your layout html page to this particular Chai app page.
-</h1
-{% endblock %}
+
+    <h1> Welcome To All Chai Page !! </h1>
+
+    <div class="grid grid-cols-3 gap-4 m-10">
+        
+        {% for chai in chais %}
+            <div class = "bg-orange-500 p-4 rounded">
+                <h3 class = "text-2xl font-bold"> {{chai.name}} </h3>
+                <img class = "rounded shadow-lg p-1" src = "{{ chai.image.url }}" alt = "{{ chai.name }}">
+                <a href = "{% url 'chai_details' chai.id %}"> 
+                    <button type = "button" 
+                    class="inline-flex items-center justify-center px-4 py-2 bg-blue-500 w-[100%] hover:bg-gray-500 rounded">
+                        {{chai.chaiType}} - {{chai.id}}
+                    </button>
+                </a>
+                {% if chai.description %}
+                    {{chai.description}}
+                {% else %}
+                    No Available Description
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+    </div>
+
+{% endblock %} 
