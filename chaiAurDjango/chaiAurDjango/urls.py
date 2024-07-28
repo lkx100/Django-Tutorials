@@ -25,4 +25,6 @@ urlpatterns = [
     path('contact/', views.contact),
     # For App 'chai' with is listed in setting.py under 'APPS' : ['chai'] 
     path("chai/", include('chai.urls')),   # Control of all urls of app 'chai' goes to urls.py of app 'chai'
+
+    path("__reload__/", include("django_browser_reload.urls"))  # For Auto Reloading, NOTE: Keep this in last line only
 ]
