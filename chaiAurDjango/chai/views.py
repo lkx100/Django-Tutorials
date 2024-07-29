@@ -13,3 +13,8 @@ def order(request):
 def chai_details(request, chai_id):
     chai = get_object_or_404(chaiVariety, pk = chai_id)    # pk: primary key
     return render(request, 'chai_details.html', {'chai': chai})
+
+# def chai_store(request):
+#     stores = None
+
+#     return render(request, 'chai_store.html', {'stores': stores})
