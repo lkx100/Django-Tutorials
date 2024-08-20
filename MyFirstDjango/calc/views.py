@@ -18,9 +18,9 @@ def greet(req):
 def dashboard(req):
     return render(req, 'dashboard.html')
 
-def dashboard(request):
-    customers=Customer.objects.all()
-    return render(request,'dashboard.html',{'customers':customers})
+# def dashboard(request):
+#     customers=Customer.objects.all()
+#     return render(request,'dashboard.html',{'customers':customers})
                   
 def products(request):
     products=Product.objects.all()
