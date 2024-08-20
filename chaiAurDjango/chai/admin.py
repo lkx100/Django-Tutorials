@@ -8,7 +8,7 @@ class ChaiReviewInline(admin.TabularInline):
     extra = 2
 
 class ChaiVarietyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'chaiType', 'date_added')
+    list_display = ('name', 'chaiType', 'date_added')  # List these columns in ChaiVariety's Admin Page
     inlines = [ChaiReviewInline]
 
 class StoreAdmin(admin.ModelAdmin):
