@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class chaiVariety(models.Model):
-    CHAI_TYPE_CHOICES = [
+    CHAI_TYPE_CHOICES = [   # Enums
         ('GT', 'Green Tea'),
         ('MS', 'Masala Chai'),
         ('BT', 'Black Tea'),
@@ -13,7 +13,7 @@ class chaiVariety(models.Model):
     ]
     name = models.CharField(max_length = 100)
     image = models.ImageField(upload_to = 'chai_images/')
-    date_added = models.DateField()
+    date_added = models.DateField(default = timezone.now())
     chaiType = models.CharField(max_length = 2, choices = CHAI_TYPE_CHOICES)
     description = models.TextField(default = '')   # Default description will be "", This is optional
 
@@ -21,7 +21,7 @@ class chaiVariety(models.Model):
         return self.name
     
 
-# One to Many
+# One to Many --> One chai to Many reviews
 
 class chaiReviews(models.Model):
     RATING_CHOICES = [
